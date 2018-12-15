@@ -12,6 +12,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.carol.arriendoapp.OpcionesArrendatario.DatosArrendatarios;
+import com.example.carol.arriendoapp.OpcionesArrendatario.Mensajes;
+import com.example.carol.arriendoapp.OpcionesPropietarios.ListaArrendatarios;
+
 public class MenuArrendatario extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -31,6 +35,10 @@ public class MenuArrendatario extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        CargarF(new Mensajes());
+        navigationView.getMenu().getItem(0).setChecked(true);
+
     }
 
     @Override
@@ -71,19 +79,14 @@ public class MenuArrendatario extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        if (id == R.id.Mensaje) {
+              CargarF(new Mensajes());
+        } else if (id == R.id.ModificarDatos) {
+   CargarF(new DatosArrendatarios());
+        } else if (id == R.id.EmailA) {
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -91,8 +94,9 @@ public class MenuArrendatario extends AppCompatActivity
     }
     private void CargarF (Fragment fragmento){
         FragmentManager manager =getSupportFragmentManager();
-        manager.beginTransaction().replace(R.id.contenedorFracmento,fragmento).commit();
+        manager.beginTransaction().replace(R.id.ContenedorFArrendatario,fragmento).commit();
 
 
     }
+
 }

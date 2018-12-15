@@ -12,9 +12,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.carol.arriendoapp.OpcionesPropietarios.Codigo;
 import com.example.carol.arriendoapp.OpcionesPropietarios.ListaArrendatarios;
+import com.example.carol.arriendoapp.OpcionesPropietarios.MensajesP;
 import com.example.carol.arriendoapp.OpcionesPropietarios.Propiedades;
-import com.example.carol.arriendoapp.OpcionesPropietarios.Fragmento3;
+import com.example.carol.arriendoapp.OpcionesPropietarios.Datos_Propietario;
 
 public class MenuPropietario extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -51,7 +53,7 @@ public class MenuPropietario extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
@@ -81,12 +83,12 @@ public class MenuPropietario extends AppCompatActivity
         } else if (id == R.id.MisPropiedades) {
             CargarF(new Propiedades());
         } else if (id == R.id.MisDatos) {
-            CargarF(new Fragmento3());
+            CargarF(new Datos_Propietario());
         }
         else if (id == R.id.Mensajes) {
-
+                CargarF(new MensajesP());
         }else if (id == R.id.MiCodigo) {
-
+      CargarF(new Codigo());
         } else if (id == R.id.Email) {
 
         }
