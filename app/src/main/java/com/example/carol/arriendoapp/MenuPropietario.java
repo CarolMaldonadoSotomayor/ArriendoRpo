@@ -1,12 +1,8 @@
 package com.example.carol.arriendoapp;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,21 +12,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.carol.arriendoapp.Opciones.Fragmento1;
-import com.example.carol.arriendoapp.Opciones.Fragmento2;
-import com.example.carol.arriendoapp.Opciones.Fragmento3;
+import com.example.carol.arriendoapp.OpcionesPropietarios.ListaArrendatarios;
+import com.example.carol.arriendoapp.OpcionesPropietarios.Propiedades;
+import com.example.carol.arriendoapp.OpcionesPropietarios.Fragmento3;
 
-public class MainActivity extends AppCompatActivity
+public class MenuPropietario extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,6 +34,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        CargarF(new ListaArrendatarios());
+        navigationView.getMenu().getItem(0).setChecked(true);
     }
 
     @Override
@@ -80,20 +76,20 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-           CargarF(new Fragmento1());
-        } else if (id == R.id.nav_gallery) {
-            CargarF(new Fragmento2());
-        } else if (id == R.id.nav_slideshow) {
+        if (id == R.id.Arrendatarios) {
+           CargarF(new ListaArrendatarios());
+        } else if (id == R.id.MisPropiedades) {
+            CargarF(new Propiedades());
+        } else if (id == R.id.MisDatos) {
             CargarF(new Fragmento3());
-        } else if (id == R.id.nav_manage) {
+        }
+        else if (id == R.id.Mensajes) {
 
-        } else if (id == R.id.nav_share) {
+        }else if (id == R.id.MiCodigo) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.Email) {
 
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

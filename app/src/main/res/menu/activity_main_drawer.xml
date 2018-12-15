@@ -5,34 +5,33 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/Arrendatarios"
             android:icon="@drawable/arrendatarios"
             android:title="Arrendatarios" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/MisPropiedades"
+            android:icon="@drawable/propiedades"
+            android:title="Mis Propiedades" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/MisDatos"
+            android:icon="@drawable/datos"
+            android:title="Mis Datos" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/Mensajes"
+            android:icon="@drawable/mensajes"
+            android:title="Mis Mensajes" />
+        <item
+            android:id="@+id/MiCodigo"
+            android:icon="@drawable/codigo"
+            android:title="Mi Codigo" />
+        <item
+            android:id="@+id/Email"
+            android:icon="@drawable/email"
+            android:title="Enviar por correo" />
+
+
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+
 
 </menu>

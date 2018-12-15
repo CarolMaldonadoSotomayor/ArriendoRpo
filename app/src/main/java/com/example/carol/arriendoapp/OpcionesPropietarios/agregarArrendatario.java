@@ -1,5 +1,4 @@
-package com.example.carol.arriendoapp.Opciones;
-
+package com.example.carol.arriendoapp.OpcionesPropietarios;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,22 +8,11 @@ import android.view.ViewGroup;
 
 import com.example.carol.arriendoapp.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class Fragmento1 extends Fragment {
-
-
-    public Fragmento1() {
-        // Required empty public constructor
-    }
-
-
-    @Override
+public class agregarArrendatario extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragmento1, container, false);
+        return inflater.inflate(R.layout.agregar_arrendatario, container, false);
     }
 
 }
